@@ -1,10 +1,11 @@
 package com.junit.junittest.config;
 
+import ch.qos.logback.core.db.dialect.DBUtil;
 import com.github.springtestdbunit.bean.DatabaseDataSourceConnectionFactoryBean;
-import org.springframework.beans.factory.annotation.Value;
+import org.dbunit.database.IDatabaseConnection;
+import org.dbunit.ext.mysql.MySqlConnection;
 import org.springframework.context.annotation.Configuration;
 
-import javax.sql.DataSource;
 
 /**
  * @author fhj

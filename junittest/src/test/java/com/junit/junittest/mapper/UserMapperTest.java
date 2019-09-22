@@ -1,7 +1,9 @@
 package com.junit.junittest.mapper;
 
 
+import com.alibaba.fastjson.JSON;
 import com.github.springtestdbunit.annotation.DatabaseOperation;
+import com.github.springtestdbunit.annotation.DatabaseSetup;
 import com.junit.junittest.common.AbstractDaoDbunitTest;
 import com.junit.junittest.db.User;
 import org.junit.Test;
@@ -17,9 +19,11 @@ public class UserMapperTest extends AbstractDaoDbunitTest {
     private UserMapper userMapper;
 
     @Test
+    @DatabaseSetup(value = "/data/user-setup.xml",type = DatabaseOperation.INSERT)
     public void selectByPrimaryKey() {
-        Integer id = 1;
+        Integer id = 3;
         User user = userMapper.selectByPrimaryKey(id);
+        System.out.println(JSON.toJSON(user));
         Assert.notNull(user,"====ok=====");
     }
 
