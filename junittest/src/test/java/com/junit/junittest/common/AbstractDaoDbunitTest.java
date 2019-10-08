@@ -19,13 +19,13 @@ import org.springframework.test.context.transaction.TransactionalTestExecutionLi
  * @Description TODO
  * @date 2019/9/16  15:38
  **/
-@RunWith(SpringRunner.class)
-@MybatisTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@TestExecutionListeners({DependencyInjectionTestExecutionListener.class,
-        DirtiesContextTestExecutionListener.class,
-        TransactionalTestExecutionListener.class,
-        DbUnitTestExecutionListener.class })
-@ContextConfiguration(classes = {DBUnitConfig.class})
-public class AbstractDaoDbunitTest {
-}
+//@RunWith(SpringRunner.class)
+//@MybatisTest
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+//@TestExecutionListeners({DependencyInjectionTestExecutionListener.class,
+//        DirtiesContextTestExecutionListener.class,
+//        TransactionalTestExecutionListener.class,
+//        DbUnitTestExecutionListener.class })
+//@ContextConfiguration(classes = {DBUnitConfig.class})
+//public class AbstractDaoDbunitTest {
+//}

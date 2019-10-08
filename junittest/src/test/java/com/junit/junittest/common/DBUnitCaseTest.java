@@ -47,8 +47,8 @@ public class DBUnitCaseTest extends DBTestCase {
 
     @Test
     public void testPartialExport() throws DataSetException, IOException {
-        QueryDataSet queryDataSet = new QueryDataSet(iDatabaseConnection);
-        queryDataSet.addTable("user", "select * from user limit 0,5 ");
-        FlatXmlDataSet.write(queryDataSet, new FileOutputStream("src/test/resources/data/user-setup.xml"));
+//        QueryDataSet queryDataSet = new QueryDataSet(iDatabaseConnection);
+//        queryDataSet.addTable("user", "select * from user limit 0,5 ");
+//        FlatXmlDataSet.write(queryDataSet, new FileOutputStream("src/test/resources/data/user-setup.xml"));
     }
 }
