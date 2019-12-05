@@ -5,6 +5,7 @@ import com.junit.junittest.db.User;
 import com.junit.junittest.service.UserService;
 import com.junit.junittest.test.mapstruct.UserConverter;
 import com.junit.junittest.test.mapstruct.UserDto;
+import com.junit.junittest.test.mapstruct.properties.TestProperties;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -42,10 +43,13 @@ public class UserController {
 
     @Autowired
     private UserConverter userConverter;
+    @Autowired
+    private TestProperties testProperties;
 
     @GetMapping("/test/converter")
     @ApiOperation(value = "selectByPrimaryKey", notes = "根据编号获取用户信息")
     public UserDto userConverter(int id,String name) {
+        testProperties.getInitMap();
         com.junit.junittest.test.mapstruct.User user = new com.junit.junittest.test.mapstruct.User();
         user.setId(id);
         user.setName(name);
