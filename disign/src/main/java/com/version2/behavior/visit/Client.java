@@ -30,6 +30,6 @@ public class Client {
         Visitor visitor = new BigDataVisitor();
 
         structure.calculation(visitor);
-        Model
+
     }
 }
